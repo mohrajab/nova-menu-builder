@@ -60,7 +60,7 @@ class MenuResource extends Resource
 
             Text::make(__('Slug'), 'slug')
                 ->sortable()
-                ->createRules('required', 'max:255', 'unique:menus,slug')
+                ->creationRules('required', 'max:255', 'unique:menus,slug')
                 ->updateRules('required', 'max:255', 'unique:menus,slug,{{resourceId}},id,locale,' . $request->locale),
 
 
